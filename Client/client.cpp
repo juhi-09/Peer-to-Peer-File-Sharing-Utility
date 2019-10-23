@@ -131,6 +131,18 @@ string toLower(string s){
 
 /**********************************************************************************************************/
 
+string toUpper(string s){
+    locale l;
+    string ret;
+    for (int i = 0; i < (int)s.length(); ++i){
+        ret += toupper(s[i], l);
+    }
+    //cout << "Given string converted to Upper case: "<<ret<<endl; 
+    return ret;
+}
+
+/**********************************************************************************************************/
+
 vector<string> split(const char *received_string){
     vector<string> list;
     string s = string(received_string);
